@@ -168,7 +168,9 @@
         "Indirizzo",
         "Tecnico incaricato",
         "Data sopralluogo",
-        "Stato"
+        "Stato",
+        "Data trattativa di gara",
+        "Data stipula prevista"
       ],
       "rows": [
         [
@@ -177,7 +179,9 @@
           "Via delle Lanterne 12, Borgo delle Vele",
           "Enea Lumo",
           "12/06/2025",
-          "In istruttoria"
+          "In istruttoria",
+          "—",
+          "12/07/2025"
         ],
         [
           "PR-2411",
@@ -185,7 +189,9 @@
           "Piazza dei Nubi 3, Piana dei Nubi",
           "Mira Vela",
           "13/06/2025",
-          "Sopralluogo fissato"
+          "Sopralluogo fissato",
+          "—",
+          "13/07/2025"
         ],
         [
           "PR-2397",
@@ -193,7 +199,9 @@
           "Viale delle Felci 8, Valle Serena",
           "Timo Riva",
           "16/06/2025",
-          "Da chiudere"
+          "Da chiudere",
+          "—",
+          "16/07/2025"
         ],
         [
           "PR-2413",
@@ -201,7 +209,9 @@
           "Via del Glicine 5, Colle del Lume",
           "Neri Alba",
           "18/06/2025",
-          "In istruttoria"
+          "In istruttoria",
+          "—",
+          "18/07/2025"
         ]
       ],
       "form": [
@@ -210,7 +220,9 @@
         "Indirizzo",
         "Tecnico incaricato",
         "Data sopralluogo",
-        "Stato"
+        "Stato",
+        "Data trattativa di gara",
+        "Data stipula prevista"
       ]
     },
     {
@@ -255,7 +267,8 @@
         "Categoria",
         "Intervento",
         "Data preventivo",
-        "Importo"
+        "Importo",
+        "Esito affidamento"
       ],
       "rows": [
         [
@@ -263,42 +276,48 @@
           "Lavori",
           "Riparazione copertura",
           "14/05/2025",
-          "4.850"
+          "4.850",
+          "Non affidato"
         ],
         [
           "Riva Manutenzioni",
           "Lavori",
           "Riparazione copertura",
           "16/05/2025",
-          "5.120"
+          "5.120",
+          "Non affidato"
         ],
         [
           "Alba Servizi Tecnici",
           "Lavori",
           "Riparazione copertura",
           "18/05/2025",
-          "4.690"
+          "4.690",
+          "Affidato"
         ],
         [
           "Vela Impianti",
           "Servizi",
           "Manutenzione illuminazione",
           "08/05/2025",
-          "2.340"
+          "2.340",
+          "Affidato"
         ],
         [
           "Nubi Forniture",
           "Servizi",
           "Manutenzione illuminazione",
           "11/05/2025",
-          "2.510"
+          "2.510",
+          "Non affidato"
         ],
         [
           "Lumo Cantieri",
           "Lavori",
           "Ripristino pavimentazione",
           "20/04/2025",
-          "3.780"
+          "3.780",
+          "Affidato"
         ]
       ],
       "form": [
@@ -308,6 +327,72 @@
         "Data preventivo",
         "Importo"
       ]
+    },
+    {
+      "id": "scadenze-gare",
+      "title": "Scadenze gare",
+      "description": "Segui le scadenze delle gare associate a ciascun fornitore.",
+      "metrics": [
+        {
+          "label": "Gare registrate",
+          "value": "6"
+        },
+        {
+          "label": "Fornitori coinvolti",
+          "value": "6"
+        }
+      ],
+      "columns": [
+        "Fornitore",
+        "Gara",
+        "Data scadenza",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "Lumo Cantieri",
+          "Riparazione copertura",
+          "30/09/2025",
+          "In corso"
+        ],
+        [
+          "Vela Impianti",
+          "Manutenzione illuminazione",
+          "15/10/2025",
+          "In corso"
+        ],
+        [
+          "Nubi Forniture",
+          "Fornitura arredi",
+          "28/10/2025",
+          "Da verificare"
+        ],
+        [
+          "Riva Manutenzioni",
+          "Ripristino pavimentazione",
+          "12/11/2025",
+          "In corso"
+        ],
+        [
+          "Alba Servizi Tecnici",
+          "Verifica impianti",
+          "20/11/2025",
+          "Da verificare"
+        ],
+        [
+          "Quercia Materiali",
+          "Fornitura materiali",
+          "05/12/2025",
+          "In corso"
+        ]
+      ],
+      "form": [
+        "Fornitore",
+        "Gara",
+        "Data scadenza",
+        "Stato"
+      ],
+      "statusColumn": 3
     }
   ],
   "theme": {
@@ -316,20 +401,36 @@
   },
   "custom": [
     {
-      "name": "ConfrontoStoricoPreventivi",
-      "title": "Confronto dello storico",
-      "description": "Confronto per intervento e categoria con ricerca, filtri e scarti dal minimo.",
-      "role": "section",
-      "pageId": "confronto-preventivi",
-      "position": "top"
-    },
-    {
       "name": "PercorsoFornitore",
       "title": "Inserimento guidato fornitore",
       "description": "Percorso in tre passaggi per registrare fornitori non iscritti, con riepilogo e stato prudenziale.",
       "role": "section",
       "pageId": "fornitori",
       "position": "top"
+    },
+    {
+      "name": "ConfrontoStoricoPreventivi",
+      "title": "Confronto dello storico",
+      "description": "Valutazione congiunta della rotazione e dei prezzi, con evidenze storiche e criteri espliciti.",
+      "role": "section",
+      "pageId": "confronto-preventivi",
+      "position": "top"
+    },
+    {
+      "name": "GiorniScadenzeGare",
+      "title": "Giorni alle scadenze",
+      "description": "Conteggio automatico dei giorni di calendario con distinzione tra gare scadute, in scadenza oggi e future.",
+      "role": "section",
+      "pageId": "scadenze-gare",
+      "position": "top"
+    },
+    {
+      "name": "TempisticaStipula",
+      "title": "Tempistica di stipula del contratto",
+      "description": "Form integrativo per aggiornare la trattativa e calcolare automaticamente la stipula a trenta giorni di calendario.",
+      "role": "section",
+      "pageId": "pratiche",
+      "position": "form"
     }
   ]
 }
