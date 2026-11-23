@@ -322,6 +322,14 @@
       "role": "section",
       "pageId": "confronto-preventivi",
       "position": "top"
+    },
+    {
+      "name": "PercorsoFornitore",
+      "title": "Inserimento guidato fornitore",
+      "description": "Percorso in tre passaggi per registrare fornitori non iscritti, con riepilogo e stato prudenziale.",
+      "role": "section",
+      "pageId": "fornitori",
+      "position": "top"
     }
   ]
 }
