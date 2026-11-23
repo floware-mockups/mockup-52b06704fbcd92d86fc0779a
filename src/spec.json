@@ -231,10 +231,97 @@
         "Raggio",
         "Iscrizione MEPA"
       ]
+    },
+    {
+      "id": "confronto-preventivi",
+      "title": "Confronto preventivi",
+      "description": "Storico dei preventivi ricevuti, organizzato per intervento e fornitore.",
+      "metrics": [
+        {
+          "label": "Preventivi registrati",
+          "value": "6"
+        },
+        {
+          "label": "Interventi confrontabili",
+          "value": "3"
+        },
+        {
+          "label": "Fornitori coinvolti",
+          "value": "5"
+        }
+      ],
+      "columns": [
+        "Fornitore",
+        "Categoria",
+        "Intervento",
+        "Data preventivo",
+        "Importo"
+      ],
+      "rows": [
+        [
+          "Lumo Cantieri",
+          "Lavori",
+          "Riparazione copertura",
+          "14/05/2025",
+          "4.850"
+        ],
+        [
+          "Riva Manutenzioni",
+          "Lavori",
+          "Riparazione copertura",
+          "16/05/2025",
+          "5.120"
+        ],
+        [
+          "Alba Servizi Tecnici",
+          "Lavori",
+          "Riparazione copertura",
+          "18/05/2025",
+          "4.690"
+        ],
+        [
+          "Vela Impianti",
+          "Servizi",
+          "Manutenzione illuminazione",
+          "08/05/2025",
+          "2.340"
+        ],
+        [
+          "Nubi Forniture",
+          "Servizi",
+          "Manutenzione illuminazione",
+          "11/05/2025",
+          "2.510"
+        ],
+        [
+          "Lumo Cantieri",
+          "Lavori",
+          "Ripristino pavimentazione",
+          "20/04/2025",
+          "3.780"
+        ]
+      ],
+      "form": [
+        "Fornitore",
+        "Categoria",
+        "Intervento",
+        "Data preventivo",
+        "Importo"
+      ]
     }
   ],
   "theme": {
     "palette": "terracotta",
     "fonts": "classico"
-  }
+  },
+  "custom": [
+    {
+      "name": "ConfrontoStoricoPreventivi",
+      "title": "Confronto dello storico",
+      "description": "Confronto per intervento e categoria con ricerca, filtri e scarti dal minimo.",
+      "role": "section",
+      "pageId": "confronto-preventivi",
+      "position": "top"
+    }
+  ]
 }
